@@ -3,7 +3,8 @@
 *::after{
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box;  /*elements will stay within the limit
+  they have been defined i.e The box-sizing CSS property sets how the total width and height of an element is calculated.*/
 }
 
 html{
@@ -13,7 +14,7 @@ html{
 
 body{
   font-family: "Montserrat", sans-serif;
-  overflow-x: hidden;
+  overflow-x: hidden; /*so that scroll bar is not visible horizontally*/
 }
 
 a{
@@ -35,6 +36,7 @@ a{
 }
 
 /* Header */
+
 .headerStyle{
   width: 100%;
   position: fixed;
@@ -50,6 +52,58 @@ a{
   z-index: 50;
 }
 
+.nav{
+  display: flex;
+  aligh-items: center;
+  justify-content: space-between;
+  }
+
+.nav::before{
+  content: "";
+  position: fixed;
+  top: 0;
+  left:0;
+  width:100vw;
+  height:100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: -1;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s;
+}
+
+.open .nav::before {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.nav__button {
+    background-color: #fff;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    z-index: 2000;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+}
+
+.nav__icon {
+    position: relative;
+    margin-top: 2.5rem;
+}
+
+.nav__icon,
+.nav__icon::before,
+.nav__icon::after {
+    width: 2.5rem;
+    height: 2px;
+    background-color: #333;
+    display: inline-block;
+}
 /*Footer*/
 /*.footer{
   height:20vh;

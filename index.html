@@ -5,9 +5,15 @@
   <meta name="viewport"
   content="width-device-width, initial-scale=1.0, minimum-scale=1.0"/>
 
-  <link rel="stylesheet" href="style.css"/>
-  <!--Google Fonts From FontAwesome-->
+<!--Google Fonts From FontAwesome-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+<!--Google Fonts-->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Montserrat&display=swap" rel="stylesheet">
+
+<!--linked with style.css-->
+  <link rel="stylesheet" href="style.css"/>
   <title>Creepy Tummy</title>
 </head>
 <body>
@@ -15,10 +21,10 @@
     <div class="container-fluid">
       <nav class="nav">
         <a href="index.html" class="logo">
-          <img src="img/logo.png" alt="logo for the company"></a>
+          <img src="img/logo.png" alt="logo for the company"/></a>
 
-          <div class="nav_button">
-            <span class="nav_icon"></span>
+          <div class="nav__button">
+            <span class="nav__icon"></span>
           </div>
 
           <ul class="nav-list">
@@ -45,13 +51,27 @@
   </header>
 
   <main>
-    
+    <div class="hero" id="hero">
+      <div class="container">
+        <div class="premium-container">
+          <img class="premium" src="img/motto.png" alt="Motto of Creepy Tummy"/>
+          <h3 class="quality">Get Premium Quality</h3>
+        </div>
+
+        <div class="restaurant-title">
+          <h1 class="title"> Restaurant like dishes at <br> HOME </h1>
+        </div>
+      </div>
+
+      <a href="#" class="go-top"><i class="fas fa-arrow-up"></i></a>
+
+    </div>
 
   </main>
 
-  <footer class="footer">
+<!--  <footer class="footer">
   <p class="copyright">
     Copyright &copy; 2020 by Creepy Tummy <br> All rights reserved.</p>
-  </footer>
+  </footer>-->
 </body>
 </html>
